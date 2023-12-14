@@ -1,0 +1,126 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alien Invasion</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="1200" height="800"></canvas>
+    <script src="game.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alien Invasion</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0e0e0;
+        }
+
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const ship = {
+            x: 50,
+            y: 500,
+            width: 50,
+            height: 50,
+            speed: 5,
+        };
+
+        const bullets = [];
+
+        function drawShip() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#00f';
+            ctx.fillRect(ship.x, ship.y, ship.width, ship.height);
+        }
+
+        function moveShip(direction) {
+            if (direction === 'left' && ship.x > 0) {
+                ship.x -= ship.speed;
+            } else if (direction === 'right' && ship.x + ship.width < canvas.width) {
+                ship.x += ship.speed;
+            }
+        }
+
+        function drawBullets() {
+            ctx.fillStyle = '#f00';
+            bullets.forEach(bullet => {
+                ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
+            });
+        }
+
+        function moveBullets() {
+            bullets.forEach(bullet => {
+                bullet.y -= 5;
+            });
+
+            bullets = bullets.filter(bullet => bullet.y > 0);
+        }
+
+        function shootBullet() {
+            const bullet = {
+                x: ship.x + ship.width / 2 - 2,
+                y: ship.y,
+                width: 4,
+                height: 10,
+            };
+
+            bullets.push(bullet);
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'ArrowLeft') {
+                moveShip('left');
+            } else if (event.key === 'ArrowRight') {
+                moveShip('right');
+            } else if (event.key === ' ') {
+                shootBullet();
+            }
+        }
+
+        function gameLoop() {
+            drawShip();
+            drawBullets();
+            moveBullets();
+            requestAnimationFrame(gameLoop);
+        }
+
+        window.addEventListener('keydown', handleKeyPress);
+
+        // Start the game loop
+        gameLoop();
+    </script>
+</body>
+</html> -->
