@@ -36,7 +36,7 @@ cd alien-invasion-web
 - Flask
 - Pygame
 
-Usage
+## Usage
 ### 1st type of running the game
 1.Just run the main.py python file in the project directory, you can play the game on the desktop
 
@@ -48,8 +48,9 @@ Usage
 python app.py
 
 Open your web browser and follow the link in the terminal to play the game.
-Acknowledgments
+
+## Acknowledgments
 Special thanks to Pygame and Flask for their fantastic libraries.
 
-Contact
+## Contact
 For issues or inquiries, contact sathvikamamindla169@gmail.com.
